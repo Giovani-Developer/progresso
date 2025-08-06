@@ -85,6 +85,7 @@
     border-radius: 14px;
     width: 50%;
     color: white;
+    cursor: pointer;
 }
 
 .agendamento-img {
@@ -102,4 +103,10 @@
     color: #A1A1AA;
     font-size: 12px;
     margin-top: 4px;
+}
+
+#link-agendar {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
 }
