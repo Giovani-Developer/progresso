@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    background-color: rgb(34, 34, 34);
+}
+
+.nav-bar {
+    position: fixed !important;
+    border-bottom: 1px solid;
+    display: flex;
+    gap: 2rem;
+    z-index: 1000;
+    align-items: center;
+    padding: 0.5rem;
+    box-shadow: 0 2px 10px rgba(113, 255, 25, 0.475);
+    width: 100%;
+}
+
+
+.img-nav {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu-list li {
+    margin: 0 15px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    font-weight: 550;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.link a:hover {
+    color: rgba(113, 255, 25, 0.475);
+    content: "";
+    transition: all 0.4s ease;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.link a:hover::after {
+    width: 70%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 7rem 2rem;
+    color: white;
+}
+
+.content {
+    padding: 8px;
+    font-size: 11px;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
+.color-span {
+    color: green;
+}
+
+.agendamento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px green solid;
+    border-radius: 14px;
+    width: 50%;
+    color: white;
+}
+
+.agendamento-img {
+    width: 80px;
+    height: auto;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.style-cut {
+    color: #A1A1AA;
+    font-size: 12px;
+    margin-top: 4px;
+}
