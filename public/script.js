@@ -4,7 +4,7 @@ async function agendar() {
     const data = document.getElementById('data').value;
     const hora = document.getElementById('hora').value;
 
-    const res = await fetch('http://localhost:5000/agendar', {
+    const res = await fetch('http://localhost:3333/agendar', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -22,7 +22,7 @@ async function agendar() {
 }
 
 async function carregarAgendamentos() {
-    const res = await fetch('http://localhost:5000/agendamentos/1');
+    const res = await fetch('http://localhost:3333/agendamentos/1');
     const agendamentos = await res.json();
     const lista = document.getElementById('lista-agendamentos');
     lista.innerHTML = "";
