@@ -22,6 +22,14 @@ if (fs.existsSync('agendamentos.json')) {
     agendamentos = JSON.parse(fs.readFileSync('agendamentos.json'));
 }
 
+app.post('/appointment', (req, res) =>{
+    const {servico, preco} = req.body;
+
+    console.log(`Serviço agendado: ${servico} - R$${preco}`);
+
+    res.status(200).json({mensagem: 'Agendamento recebido com sucesso!'});
+});
+
 app.post('/agendar', (req, res) => {
     const { usuario_id, profissional_id, servico, data, hora } = req.body;
 

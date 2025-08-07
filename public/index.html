@@ -14,13 +14,12 @@
         <div class="navbar-content">
             <ul class="menu-list">
                 <img class="img-nav" src="./img/ProgressoNav.png" alt="">
-                <li id="link1" class="link"><a href="#">Início</a></li>
-                <li id="link1" class="link"><a href="./search.html">Buscar</a></li>
-                <li id="link1" class="link"><a href="#" target="_blank" rel="external">Meus agendamentos</a></li>
+                <li class="link"><a href="#">Início</a></li>
+                <li class="link"><a href="./search.html">Buscar</a></li>
+                <li class="link"><a href="#" target="_blank" rel="external">Meus agendamentos</a></li>
             </ul>
         </div>
     </nav>
-
 
     <main class="container">
         <div class="content">
@@ -30,16 +29,59 @@
                 <h3>Último agendamento</h3>
             </section>
         </div>
+
         <div class="agendamento">
             <img class="agendamento-img" src="./img/ProgressoNav.png" alt="">
             <div class="info">
-
-                <p><a id="link-agendar" href="./appointment.html">Barbearia Progresso</a></p>
-                <p class="style-cut">Agende seu horário!</p>
+                <p><a id="link-agendar">Barbearia Progresso</a></p>
+                <button id="btnMostrarServicos" class="btn-agendar">Agende seu
+                    horário!</button>
             </div>
         </div>
+
+        <!-- SEÇÃO DE SERVIÇOS ESCONDIDA INICIALMENTE 
+        <div id="servicos" style="display: none;">
+            <section class="servicos">
+                <h2>Serviços</h2>
+                <input type="text" id="search" placeholder="Pesquisar...">
+
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="img/barba.png" alt="Serviço de barba">
+                        <p>Barba <br><span style="color:green;">R$35,00</span></p>
+                        <button onclick="agendarServico('Barba', 35)" class="btn-agendar">Agendar</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/barba-raspada.png" alt="Barba raspada">
+                        <p>Barba Raspada <br><span style="color:green;">R$30,00</span></p>
+                        <button onclick="agendarServico('Barba Raspada', 30)" class="btn-agendar">Agendar</button>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/camuflagem.png" alt="Camuflagem">
+                        <p>Camuflagem <br><span style="color:green;">R$25,00</span></p>
+                        <button onclick="agendarServico('Camuflagem', 25)" class="btn-agendar">Agendar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        -->
     </main>
-    <script src="./script.js"></script>
+
+    <script>
+        const btn = document.getElementById('btnMostrarServicos');
+        const servicos = document.getElementById('servicos');
+
+        btnMostrarServicos.addEventListener('click', () => {
+
+        })
+
+        btn.addEventListener('click', () => {
+            servicos.style.display = 'block';
+            btn.style.display = 'none';
+        });
+    </script>
 </body>
 
 </html>

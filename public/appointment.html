@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/ProgressoNav.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleAgendar.css">
     <title>Barbearia Progresso</title>
 </head>
 
@@ -13,62 +13,87 @@
     <nav class="nav-bar">
         <div class="navbar-content">
             <ul class="menu-list">
-                <img class="img-nav" src="./img/ProgressoNav.png" alt="">
+                <img class="img-nav" src="./img/ProgressoNav.png" alt="Logo da Barbearia">
                 <li id="link1" class="link"><a href="./index.html">Início</a></li>
                 <li id="link1" class="link"><a href="./search.html">Buscar</a></li>
                 <li id="link1" class="link"><a href="#" target="_blank" rel="external">Meus agendamentos</a></li>
             </ul>
         </div>
     </nav>
+
     <main>
         <div class="color">
-            <h1><img src="img/logo.png" width="200px" alt="imagem externa"> Barbearia Progresso</h1>
-            <img src="foto que esta ´´appbarber``" alt="">
+            <h1><img src="img/logo.png" width="200px" alt="Logo da Barbearia"> Barbearia Progresso</h1>
+            <img src="img/appbarber.png" alt="Imagem do app da barbearia">
             <ul>
                 <li>
-                    <h2><a href="pagina que vamos ter que criar">Serviço</a></h2>
+                    <h2><a href="servicos.html">Serviço</a></h2>
                 </li>
                 <li>
-                    <h2> <a href="pagina falando sobre profissionais que vamos criar">Profissionais</a></h2>
+                    <h2><a href="profissionais.html">Profissionais</a></h2>
                 </li>
             </ul>
             <p>Comodidades</p> <br>Clique no item para obter informações <br>
             <ul>
                 <li>
-                    <img src="wi-fi" alt="foto que precisa clicar para ter uma animação">
-                    <img src="estacionamento" alt="foto que precisa clicar para ter uma animação">
-                    <img src="acessibilidade" alt="foto que precisa clicar para ter uma animação">
-                    <img src="atende crianças" alt="foto que precisa clicar para ter uma animação">
+                    <img src="img/wi-fi.png" alt="Wi-Fi">
+                    <img src="img/estacionamento.png" alt="Estacionamento">
+                    <img src="img/acessibilidade.png" alt="Acessibilidade">
+                    <img src="img/atende-criancas.png" alt="Atende crianças">
                 </li>
             </ul>
-
         </div>
+
         <div class="color">
             <h2>Serviços</h2>
             <input type="text" id="search" placeholder="Pesquisar...">
-            <div>
-                <img src="imagem de uma barba" alt="#"> Barba <br>R$35.00 <!--na cor verde o preco-->
-                <button class="btn-agendar">Agendar</button>
+
+            <div class="card">
+                <img src="img/barba.png" alt="Serviço de barba">
+                <p>Barba <br><span style="color:green;">R$35.00</span></p>
+                <button onclick="agendarServico('Barba', 35)" class="btn-agendar">Agendar</button>
             </div>
-            <div class="color">
-                <img src="imagem de uma barba raspada" alt="#"> Barba Raspada <br>R$30.00 <!--na cor verde o preco-->
-                <button class="btn-agendar">Agendar</button>
+
+            <div class="card">
+                <img src="img/barba-raspada.png" alt="Barba raspada">
+                <p>Barba Raspada <br><span style="color:green;">R$30.00</span></p>
+                <button onclick="agendarServico('Barba Raspada', 30)" class="btn-agendar">Agendar</button>
             </div>
-            <div class="color">
-                <img src="imagem de camuflagem" alt="#"> Camuflagem <br> R$25.00 <!--na cor verde o preco-->
-                <button class="btn-agendar">Agendar</button>
+
+            <div class="card">
+                <img src="img/camuflagem.png" alt="Camuflagem">
+                <p>Camuflagem <br><span style="color:green;">R$25.00</span></p>
+                <button onclick="agendarServico('Camuflagem', 25)" class="btn-agendar">Agendar</button>
             </div>
-            <div><img src="imagem de corte de cabelo" alt="#"> Corte de Cabelo <br> R$40.00 <!--na cor verde o preco-->
-                <button class="btn-agendar">Agendar</button>
+
+            <div class="card">
+                <img src="img/corte-cabelo.png" alt="Corte de cabelo">
+                <p>Corte de Cabelo <br><span style="color:green;">R$40.00</span></p>
+                <button onclick="agendarServico('Corte de Cabelo', 40)" class="btn-agendar">Agendar</button>
             </div>
         </div>
 
-
+        <div id="formulario-agendamento" style="display: none;">
+            <h3>Agendar Serviço</h3>
+            <input type="text" id="servico" readonly>
+            <input type="text" id="preco" readonly>
+            <input type="date" id="data">
+            <input type="time" id="hora">
+            <select id="profissional">
+                <option value="1">João</option>
+                <option value="2">Miguel</option>
+            </select>
+            <button onclick="agendar()">Confirmar</button>
+        </div>
     </main>
-
-
-
-
+    <script>
+        function agendarServico(servico, preco) {
+            document.getElementById('servico').value = servico;
+            document.getElementById('preco').value = preco;
+            document.getElementById('formulario-agendamento').style.display = 'block';
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
